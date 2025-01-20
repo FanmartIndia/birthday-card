@@ -74,7 +74,7 @@ const Landing = () => {
       if (customUrlEnabled) {
         try {
           const { data } = await axios.get(
-            `http://13.201.137.218/api/check-custom/${values?.customUrlPart}`
+            `https://vmxwrkamih.execute-api.ap-south-1.amazonaws.com/api/check-custom/${values?.customUrlPart}`
           );
           if (data.exists) {
             toast.error("Custom URL already taken. Please choose another.", {
@@ -93,7 +93,7 @@ const Landing = () => {
 
             try {
               const { data } = await axios.post(
-                "http://13.201.137.218/api/payment",
+                "https://vmxwrkamih.execute-api.ap-south-1.amazonaws.com/api/payment",
                 payData
               );
               if (data?.redirectUrl) {
@@ -123,7 +123,7 @@ const Landing = () => {
 
         try {
           const response = await axios.post(
-            "http://13.201.137.218/api/create-user",
+            "https://vmxwrkamih.execute-api.ap-south-1.amazonaws.com/api/create-user",
             SendData
           );
 
