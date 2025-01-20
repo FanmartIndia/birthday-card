@@ -13,7 +13,7 @@ const User = () => {
     const fetchUser = async () => {
       try {
         const res = await axios.get(
-          `https://birthday-cake-backend-1.onrender.com/api/get-user/${id}`
+          `https://vmxwrkamih.execute-api.ap-south-1.amazonaws.com/api/get-user/${id}`
         );
 
         console.log("response from user: ", res?.data);
