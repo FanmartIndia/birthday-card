@@ -13,7 +13,7 @@ const User = () => {
     const fetchUser = async () => {
       try {
         const res = await axios.get(
-          `http://13.201.137.218/api/get-user/${id}`
+          `https://vmxwrkamih.execute-api.ap-south-1.amazonaws.com/api/get-user/${id}`
         );
 
         console.log("response from user: ", res?.data);
